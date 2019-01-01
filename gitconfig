@@ -3,6 +3,7 @@
 	br = branch
 	ci = commit
 	st = status
+	a = add
 [user]
 	email = srufle@gmail.com
 	name = Stephen Rufle
