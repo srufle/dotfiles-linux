@@ -120,3 +120,5 @@ test -d ${HOME}/bin || mkdir ${HOME}/bin
 # Set to use vim bindings in bash
 set -o vi
 export PATH=${HOME}/.cargo/bin:${PATH}:${HOME}/bin
+export EDITOR=vim
+
