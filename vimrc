@@ -1,6 +1,10 @@
 " Set Line numbers on
 set nu
 
+" Load all plugins
+packloadall
+silent! helptags ALL
+
 " Show invisible characters
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
@@ -18,9 +22,9 @@ set tabstop=2
 set shiftwidth=2
 
 set backspace=2
-set undofile
+"set undofile
 " Set a common undo directory
-if !isdirectory("$HOME/.vim/undodir")
-  call mkdir("$HOME/.vim/undodir","p")
-endif
-set undodir="$HOME/.vim/undodir"
+"if !isdirectory($HOME/.vim/undodir)
+"  call mkdir($HOME/.vim/undodir,"p")
+"endif
+"set undodir=$HOME/.vim/undodir
