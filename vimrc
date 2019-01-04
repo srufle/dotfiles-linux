@@ -1,6 +1,14 @@
 " Set Line numbers on
 set nu
 
+" Install vim-plug if missing
+" https://www.rosipov.com/blog/cross-platform-vim-plug-setup/
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PluginInstall --sync | source $MYVIMRC
+endif  
+
 " Manage plugins with vim-plug
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
