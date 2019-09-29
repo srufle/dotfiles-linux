@@ -6,3 +6,5 @@ alias cd..='cd ..'
 ## a quick way to get out of current directory ##
 alias ..='cd ..' 
 alias ...='cd ../../../'
+alias sha3='sha512sum'
+alias sha1='sha1sum'
