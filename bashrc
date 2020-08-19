@@ -120,5 +120,22 @@ test -d ${HOME}/bin || mkdir ${HOME}/bin
 # Set to use vim bindings in bash
 set -o vi
 export PATH=${HOME}/.cargo/bin:${PATH}:${HOME}/bin
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 export EDITOR=vim
 
+# AWS cli
+AWS_COMPLETER=$(which aws_completer)
+complete -C "${AWS_COMPLETER}" aws
+
+# Terraform
+alias tf="terraform"
+alias tg="terragrunt"
+complete -C /home/srufle/bin/terraform terraform
+complete -C /home/srufle/bin/terraform tf
+# Rust - Cargo
+source $(rustc --print sysroot)/etc/bash_completion.d/cargo
+
+# Python - pipenv
+eval "$(pipenv --completion)"
