@@ -139,3 +139,5 @@ source $(rustc --print sysroot)/etc/bash_completion.d/cargo
 
 # Python - pipenv
 eval "$(pipenv --completion)"
+
+export JAVA_HOME="$(readlink -f /usr/bin/java | sed "s:bin/java::")"
